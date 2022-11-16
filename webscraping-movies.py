@@ -18,8 +18,15 @@ soup = BeautifulSoup(page, 'html.parser')
 title = soup.title
 
 print(title.text)
-##
-##
-##
-##
 
+tablecells = soup.findAll('td')
+
+counter = 1
+
+for cell in tablecells[1:6]:
+    name = tablecells[counter].text
+    print(cell.text)
+##
+##
+##
+##
